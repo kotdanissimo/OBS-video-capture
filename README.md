@@ -19,11 +19,13 @@ pip install opencv-python
 
 
   ## Usage
-Run the script:
+Run the script [capture.py](capture.py):
 ```bash
 python capture.py
 ```
+
 Ensure that the OBS Studio virtual camera is activated.
+
 Press 'q' to exit the application.
 
 
