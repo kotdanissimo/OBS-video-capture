@@ -1,4 +1,5 @@
-# MIT License
+# This code and the opencv library are licensed under the Apache License, version 2.0.
+# More details can be found in the LICENSE file or at http://www.apache.org/licenses/
 import cv2
 
 
