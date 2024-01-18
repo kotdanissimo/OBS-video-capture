@@ -1,8 +1,8 @@
-  ## OBS Video Capture
+  # OBS Video Capture
 This is a simple Python script that captures video from OBS Studio using the OpenCV library. It displays the video in a window and allows you to quit the application by pressing 'q'.
 
 
-  ## Prerequisites
+  ### Prerequisites
 Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to use OBS as a virtual camera.
 
 Additionally, ensure you have the required dependencies installed using one of the following commands:
@@ -18,7 +18,7 @@ pip install opencv-python
 ```
 
 
-  ## Usage
+  ### Usage
 Run the script [capture.py](capture.py):
 ```bash
 python capture.py
