@@ -29,9 +29,10 @@ Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to
 
 #### Usage
 Run the script [capture.py](capture.py):
-```bash
-python capture.py
-```
+
+>```bash
+>python capture.py
+>```
 
 Ensure that the OBS Studio virtual camera is activated.
 
