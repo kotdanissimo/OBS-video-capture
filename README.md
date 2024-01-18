@@ -3,6 +3,12 @@ This is a simple Python script that captures video from OBS Studio using the Ope
 
 
   ### Prerequisites
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/kotdanissimo/OBS-Video-Capture
+```
+
 Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to use OBS as a virtual camera.
 
 Additionally, ensure you have the required dependencies installed using one of the following commands:
