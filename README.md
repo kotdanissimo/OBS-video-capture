@@ -3,7 +3,14 @@ This is a simple Python script that captures video from OBS Studio using the Ope
 
 
   ## Prerequisites
-Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to use OBS as a virtual camera. Additionally, ensure you have the OpenCV library installed:
+Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to use OBS as a virtual camera.
+
+Additionally, ensure you have the required dependencies installed using one of the following commands:
+
+pip install -r requirements.txt
+
+or
+
 pip install opencv-python
 
 
