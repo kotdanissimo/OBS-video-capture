@@ -11,7 +11,7 @@ Additionally, ensure you have the required dependencies installed using one of t
 pip install -r requirements.txt
 ```
 
-or
+  or
 
 ```bash
 pip install opencv-python
