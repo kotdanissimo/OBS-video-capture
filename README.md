@@ -7,11 +7,15 @@ Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to
 
 Additionally, ensure you have the required dependencies installed using one of the following commands:
 
+```bash
 pip install -r requirements.txt
+```
 
 or
 
+```bash
 pip install opencv-python
+```
 
 
   ## Usage
