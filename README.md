@@ -1,5 +1,5 @@
   ## About
-This is a simple Python script that captures video from OBS Studio using the OpenCV library. It displays the video in a window and allows you to quit the application by pressing 'q'.
+This is a simple Python script that captures video from OBS Studio using the OpenCV library. It displays the video in a window and allows you to quit the application by pressing <kbd>Q</kbd>.
 
 
   ### Prerequisites
