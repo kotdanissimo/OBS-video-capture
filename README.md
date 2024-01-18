@@ -1,6 +1,7 @@
   ## About
 This is a simple Python script that captures video from OBS Studio using the OpenCV library. It displays the video in a window and allows you to quit the application by pressing <kbd>Q</kbd>.
 
+---
 
   ### Prerequisites
 Clone the repository to your local machine:
@@ -23,6 +24,7 @@ pip install -r requirements.txt
 pip install opencv-python
 ```
 
+---
 
   ### Usage
 Run the script [capture.py](capture.py):
@@ -34,6 +36,7 @@ Ensure that the OBS Studio virtual camera is activated.
 
 Press 'q' to exit the application.
 
+---
 
   ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
