@@ -1,6 +1,6 @@
 ## About
 
-This is a simple Python script that captures video from OBS Studio using the OpenCV library. It displays the video in a window and allows you to quit the application by pressing <kbd>Q</kbd>.
+This is a Python script that captures video from a camera or a video file using the OpenCV library. It provides a `VideoCapture` class that can be used to capture video frames and display them in a window. The video capture can be stopped by pressing any of the stop keys defined when creating a `VideoCapture` object.
 
 ---
 
@@ -23,20 +23,26 @@ Additionally, ensure you have the required dependencies installed using one of t
 >pip install opencv-python
 >```
 
-Make sure you have OBS Studio installed and the obs-virtualcam plugin enabled to use OBS as a virtual camera.
-
 ---
 
 #### Usage
-Run the script [main.py](main.py):
+Create a `VideoCapture` object and start capturing video frames or displaying the video stream:
 
->```bash
->python main.py
+>```python
+>from main import VideoCapture
+>
+># Create a VideoCapture object and start displaying the video stream
+>video_capture = VideoCapture(height=720, width=1280, stop_keys=[' '])
+>video_capture.show_stream()
+>
+># Or create a VideoCapture object and start capturing video frames
+>video_capture = VideoCapture(height=720, width=1280, stop_keys=[' '])
+>for img in video_capture.capture():
+>    # Print the shape of each captured frame
+>    print(img.shape)
 >```
 
-Ensure that the OBS Studio virtual camera is activated.
-
-Press 'q' to exit the application.
+Press any of the stop keys (in this case, space) to stop the video capture.
 
 ---
 

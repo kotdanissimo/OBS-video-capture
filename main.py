@@ -5,8 +5,6 @@ class VideoCapture:
     """
     A class used to capture video from a camera or a video file.
 
-    ...
-
     Attributes
     ----------
     height : int
@@ -73,7 +71,6 @@ class VideoCapture:
             # frame is the current frame being read.
             try:
                 ret, frame = cap.read()
-                # print(frame.shape)
 
                 yield frame
 
@@ -105,7 +102,8 @@ class VideoCapture:
 
 if __name__ == "__main__":
     # Create a VideoCapture object and start displaying the video stream
-    # VideoCapture(stop_keys=[' ']).show_stream()
+    video_capture = VideoCapture(height=720, width=1280, stop_keys=[' '])
+    video_capture.show_stream()
 
     # Create a VideoCapture object and start capturing video frames
     video_capture = VideoCapture(stop_keys=[' '])
