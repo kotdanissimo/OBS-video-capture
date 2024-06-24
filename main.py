@@ -3,7 +3,7 @@
 import cv2
 
 
-def main():
+def main(height=720, width=1280, stop_keys=None):
     """
     Main function to capture video from OBS and display it.
 
@@ -14,6 +14,9 @@ def main():
         You can select the second camera by passing 1 and so on.
     """
 
+    if stop_keys is None:
+        stop_keys = ['q', 'Q']
+
     cap = cv2.VideoCapture(1)
 
     # Check if camera opened successfully
@@ -22,27 +25,26 @@ def main():
         exit()
 
     # Set video frame height and width
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 
     # Infinite loop until video capture is stopped
     while True:
-        # Capture frame-by-frame
         # ret is a boolean indicating if it was successful.
         # frame is the current frame being read.
-        ret, frame = cap.read()
-        print(frame.shape)
-
-        # If frame is read correctly ret is True
-        if not ret:
-            print("Error: Unable to read frame.")
+        try:
+            ret, frame = cap.read()
+            print(frame.shape)
+        except Exception as e:
+            print("Error" + str(e))
             break
 
         # Display the resulting frame
         cv2.imshow("OBS Stream", frame)
 
         # Wait for user to press 'q' key to stop the program
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        key = chr(cv2.waitKey(1) & 0xFF)
+        if key in stop_keys:
             break
 
     # After the loop release the cap object
@@ -53,4 +55,4 @@ def main():
 
 if __name__ == "__main__":
     # Execute main function
-    main()
+    main(stop_keys=[' '])
